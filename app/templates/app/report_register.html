@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Report</title>
+</head>
+<body>
+	<h2>Create Report</h2>
+	<form method='post'>
+		{% csrf_token %}
+		<p>
+		{% for field in form %}
+		<p>
+			{{field.label_tag }}
+			{{ field }}
+			{% for error in field.errors %}
+				<p style='color:red;'>{{error}}</p>
+			{% endfor %}
+
+		</p>
+		
+	</p>
+		<button type='submit'>Submit</button>
+	</form>
+</body>
+</html>

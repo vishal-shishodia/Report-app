@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<form method='post'>
+		{% csrf_token %}
+		<p>
+		{% for field in form %}
+		<p>
+			{{field.label_tag }}
+			{{ field }}
+			{% for error in field.errors %}
+				<p style='color:red;'>{{error}}</p>
+
+			{% endfor %}
+		</p>
+		{% endfor %}
+	</p>
+		<button type='submit'>Register</button>
+	</form>
+</body>
+</html>

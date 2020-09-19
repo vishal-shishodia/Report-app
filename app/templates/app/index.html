@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	{{ user.username }}
+	<div>
+		<a href="{% url 'app:logout' %}">Logout</a>
+	</div>
+	<div>
+		<a href="{% url 'app:createreport' %}">Create Report</a>
+	</div>
+
+</body>
+</html>
